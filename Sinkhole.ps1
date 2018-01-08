@@ -130,7 +130,6 @@ function displayMenu
   }
 
   if($userresponse -eq "6"){
-    write-output "Attempting to kill the script NOW"
     break
   }
 
