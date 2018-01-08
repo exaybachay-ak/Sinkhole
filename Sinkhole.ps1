@@ -12,11 +12,8 @@
       NOTE: At least half of the credit should go to Dave Kennedy and @BinaryDefense for making GoatRider.  
              Although the main component is the idea of re-routing to null, and the ease of use, GoatRider was what brought it all together
   
-      #Program flow:
-      To bounce malicious inbound/outbound traffic:  Run bounce.ps1
-      To undo change made previously by this script: Run bounce.ps1 -undo
       #Primary powershell command
-      New-NetRoute -DestinationPrefix "152.195.54.20/32" -InterfaceIndex 1 -NextHop 127.0.0.1
+      New-NetRoute -DestinationPrefix "152.195.54.20/32" -InterfaceIndex 1 -NextHop 0.0.0.0
       #OSINT Threat Sources:
       https://www.esentire.com/news-and-events/press-releases/esentire-launches-largest-open-source-threat-intelligence-aggregator/
       https://github.com/hslatman/awesome-threat-intelligence
