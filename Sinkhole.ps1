@@ -51,7 +51,7 @@ $banbenek.rawcontent >> blacklist.txt
 $alientvault.rawcontent >> blacklist.txt
 
 #Filter out non-ip addresses from list
-$blacklist = get-content blacklist.txt | select-string -pattern "^[0-255]{3}"
+$blacklist = get-content blacklist.txt | select-string -pattern "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$"
 
 #Notify user that setup tasks are done
 write-output "Done downloading and setting up blacklist files"
